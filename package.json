@@ -1,0 +1,43 @@
+{
+  "name": "squads-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -r ./src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "lint": "eslint . --fix",
+    "push": "drizzle-kit push:pg",
+    "pull": "drizzle-kit introspect:pg ",
+    "generate": "drizzle-kit generate:pg",
+    "drop": "drizzle-kit drop",
+    "check": "drizzle-kit check:pg",
+    "up": "drizzle-kit up:pg",
+    "migrate": "tsx src/lib/supabase/migration.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.4.1",
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
+    "drizzle-orm": "^0.29.3",
+    "express": "^4.18.2",
+    "postgres": "^3.4.3",
+    "socket.io": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.15",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
+    "drizzle-kit": "^0.20.13",
+    "eslint": "^8.32.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  }
+}
